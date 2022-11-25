@@ -1,5 +1,5 @@
 " ==================== Editor behavior ====================
-
+" http://blog.guorongfei.com/2015/09/03/vim-shortcut/
 set nu 
 syntax on
 set foldmethod=marker
@@ -83,14 +83,42 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 
-" c++snippets
-" Plug 'honza/vim-snippets'
+" diffview
+Plug 'nvim-lua/plenary.nvim'
+Plug 'sindrets/diffview.nvim'
 
-" c++ 高亮
-" Plug 'octol/vim-cpp-enhanced-highlight'
+" golang调试 - nvim-dap-go
+Plug 'leoluz/nvim-dap-go'
 
+" telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" lazygit
+" https://github.com/kdheepak/lazygit.nvim
 
 call plug#end()
+
+" ==================== telescope ======================
+" https://github.com/nvim-telescope/telescope.nvim
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Using Lua functions
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+
+
+
+" ==================== diffview =======================
+" https://github.com/sindrets/diffview.nvim
 
 " ==================== barbar ========================
 " Move to previous/next

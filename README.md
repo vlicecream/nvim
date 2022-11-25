@@ -6,3 +6,6 @@ https://minimalism-art.xyz/2022/06/12/%E5%90%84%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD
 
 # Vim Cheat Sheet
 https://vim.rtorr.com/lang/zh_cn
+
+# Shortcut Key Configuration
+http://blog.guorongfei.com/2015/09/03/vim-shortcut/
